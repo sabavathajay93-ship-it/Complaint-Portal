@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Admin - Student Voice Portal</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Sign-in screen -->
+  <main id="login-view" class="login-wrap">
+    <form id="login-form" class="card login-card">
+      <h1>Admin sign in</h1>
+      <p class="muted">Student Voice Portal</p>
+      <label>
+        Password
+        <input type="password" id="password" autocomplete="current-password" required />
+      </label>
+      <button type="submit" id="login-btn">Sign in</button>
+      <p id="login-message" class="message" role="status" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <!-- Dashboard -->
+  <main id="dashboard-view" class="page" hidden>
+    <header class="topbar">
+      <div>
+        <h1>Complaints</h1>
+        <p class="muted" id="summary"></p>
+      </div>
+      <div class="actions">
+        <select id="filter" aria-label="Filter by status">
+          <option value="">All statuses</option>
+          <option>Pending</option>
+          <option>In Progress</option>
+          <option>Resolved</option>
+        </select>
+        <input type="search" id="search" placeholder="Search name, roll no, details..." aria-label="Search complaints" />
+        <button type="button" id="refresh-btn" class="secondary">Refresh</button>
+        <button type="button" id="logout-btn" class="secondary">Sign out</button>
+      </div>
+    </header>
+
+    <p id="dash-message" class="message" role="status" aria-live="polite"></p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Submitted</th>
+            <th>Student</th>
+            <th>Institution</th>
+            <th>Class / Sec / Roll</th>
+            <th>Phone</th>
+            <th>Complaint</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

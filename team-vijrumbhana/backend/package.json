@@ -1,0 +1,19 @@
+{
+  "name": "team-vijrumbhana-backend",
+  "version": "2.0.0",
+  "description": "Student Voice Portal API (Express + PostgreSQL)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "pg": "^8.13.1"
+  }
+}

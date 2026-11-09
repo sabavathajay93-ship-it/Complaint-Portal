@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Student Voice Portal</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page">
+    <header class="intro">
+      <p class="badge">Team Vijrumbhana</p>
+      <h1>Student Voice Portal</h1>
+      <p class="lead">Share a complaint or concern. Your message goes directly to the administrators.</p>
+    </header>
+
+    <form id="complaint-form" class="card" novalidate>
+      <div class="grid">
+        <label>
+          Student name
+          <input type="text" name="studentName" maxlength="100" autocomplete="name" required />
+        </label>
+
+        <label>
+          Phone number
+          <input type="tel" name="phone" maxlength="20" inputmode="tel" autocomplete="tel" required />
+        </label>
+
+        <label>
+          Institution type
+          <select name="institutionType" required>
+            <option value="" disabled selected>Select type</option>
+            <option>School</option>
+            <option>College</option>
+            <option>University</option>
+            <option>Other</option>
+          </select>
+        </label>
+
+        <label>
+          Institution name
+          <input type="text" name="institutionName" maxlength="150" required />
+        </label>
+
+        <label>
+          Class / Course
+          <input type="text" name="className" maxlength="50" placeholder="e.g. 10th, BCA 3rd year" required />
+        </label>
+
+        <label>
+          Section
+          <input type="text" name="section" maxlength="20" placeholder="e.g. A" required />
+        </label>
+
+        <label>
+          Roll number
+          <input type="text" name="rollNumber" maxlength="30" required />
+        </label>
+      </div>
+
+      <label class="full">
+        Complaint details
+        <textarea name="details" rows="6" maxlength="2000" placeholder="Describe the problem clearly..." required></textarea>
+        <span class="counter"><span id="char-count">0</span> / 2000</span>
+      </label>
+
+      <button type="submit" id="submit-btn">Submit complaint</button>
+      <p id="message" class="message" role="status" aria-live="polite"></p>
+    </form>
+
+    <footer class="foot">Your details are used only to handle this complaint.</footer>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="home.js"></script>
+</body>
+</html>
