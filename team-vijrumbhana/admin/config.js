@@ -6,7 +6,7 @@
 // with your real Render URL (no trailing slash), then push to GitHub.
 (function () {
   var LOCAL_API_URL = 'http://localhost:3000';
-  var PRODUCTION_API_URL = 'https://YOUR-RENDER-SERVICE.onrender.com';
+  var PRODUCTION_API_URL = 'https://complaint-portal-gzgb.onrender.com';
 
   var isLocal = ['localhost', '127.0.0.1'].indexOf(window.location.hostname) !== -1;
   window.APP_CONFIG = {
